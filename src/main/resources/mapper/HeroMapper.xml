@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shidongwang.mapper.HeroMapper">
+   <select id="selectHero" parameterType="map" resultType="com.shidongwang.beans.Hero">
+      SELECT h.*,c.cname FROM tb_heros AS h LEFT JOIN tb_camp AS c ON h.`cid`=c.`cid`
+   </select>
+</mapper>
